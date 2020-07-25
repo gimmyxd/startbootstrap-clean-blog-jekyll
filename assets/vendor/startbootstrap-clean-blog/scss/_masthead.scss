@@ -6,6 +6,12 @@ header.masthead {
   background-color: $gray-600;
   background-attachment: scroll;
   position: relative;
+  @media only screen and (min-width: 768px) {
+    height: 500px;
+  }
+  @media only screen and (max-width: 768px) {
+    height: 400px;
+  }
   @include background-cover;
   .overlay {
     position: absolute;
@@ -13,7 +19,7 @@ header.masthead {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: $gray-900;
+    background-color: $gray-600;
     opacity: 0.5;
   }
   .page-heading,
@@ -21,6 +27,7 @@ header.masthead {
   .site-heading {
     padding: 200px 0 150px;
     color: white;
+    text-shadow: 3px 3px #2c3e50;
     @media only screen and (min-width: 768px) {
       padding: 200px 0;
     }
@@ -38,6 +45,7 @@ header.masthead {
       line-height: 1.1;
       display: block;
       margin: 10px 0 0;
+      text-shadow: none;
       @include sans-serif-font;
     }
     @media only screen and (min-width: 768px) {
@@ -49,11 +57,13 @@ header.masthead {
   .post-heading {
     h1 {
       font-size: 35px;
+      text-shadow: none;
     }
     .meta,
     .subheading {
       line-height: 1.1;
       display: block;
+      text-shadow: none;
     }
     .subheading {
       font-size: 24px;
